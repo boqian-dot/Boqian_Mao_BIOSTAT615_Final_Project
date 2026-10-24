@@ -1,0 +1,40 @@
+# Manually triggered: regenerate the R reference fixtures (SPEC §5) and report
+# whether they differ from the committed ones. The regenerated files are uploaded
+# as an artifact; committing them is a deliberate, separate step.
+name: Regenerate fixtures
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fixtures:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Install jsonlite
+        run: Rscript -e 'install.packages("jsonlite")'
+
+      - name: Generate fixtures
+        run: Rscript reference/generate_fixtures.R
+
+      - name: Compare with committed fixtures
+        run: |
+          git diff --stat -- tests/fixtures
+          if git diff --quiet -- tests/fixtures; then
+            echo "Fixtures are identical to the committed ones."
+          else
+            echo "::notice::Regenerated fixtures differ from the committed ones (see the diff above and the uploaded artifact)."
+          fi
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: fixtures
+          path: tests/fixtures
