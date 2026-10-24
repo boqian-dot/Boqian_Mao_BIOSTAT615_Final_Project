@@ -5,5 +5,6 @@
 
 export { pbeta, pbetaBoth } from './beta'
 export { lbeta, lgamma, stirlerr } from './gamma'
+export { pnt } from './noncentralT'
 export { pnorm, pnormBoth, qnorm } from './normal'
 export { dt, pt, qt } from './t'
