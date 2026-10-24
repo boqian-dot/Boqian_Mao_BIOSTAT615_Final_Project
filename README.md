@@ -8,7 +8,7 @@ final project, Boqian Mao. The full specification is in [SPEC.md](SPEC.md).
 
 **Status:** week 1 of 7 complete. The project scaffold and the verified numerical core
 (`src/stats/`) are in place; the app itself is a placeholder page.
-Live site: https://boqian-dot.github.io/Boqian_Mao_BIOSTAT615_First_Project/
+Live site: https://boqian-dot.github.io/Boqian_Mao_BIOSTAT615_Final_Project/
 
 ## Local development
 

@@ -7,7 +7,7 @@ This document is the build specification for **TrialSizer**. It is addressed to 
 - **Author:** Boqian Mao
 - **Course:** BIOSTAT 615 (Fall 2026), individual final project
 - **Track:** A, interactive web app
-- **Repository:** https://github.com/boqian-dot/Boqian_Mao_BIOSTAT615_First_Project (public)
+- **Repository:** https://github.com/boqian-dot/Boqian_Mao_BIOSTAT615_Final_Project (public)
 - **Milestones:** proposal Mon Oct 26, 2026 · checkpoint (deployed, working MVP) Mon Nov 23, 2026 · final submission (repository + video) Thu Dec 17, 2026, 3:30 PM ET
 
 ## 1. Goal and users

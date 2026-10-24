@@ -125,11 +125,6 @@ the editor; the agent took "the first step" to be the week-1 row of the mileston
 
 ### First push to GitHub
 
-Follow-up prompts (verbatim): "给我一点update 现在到哪一步了 还需要干什么" (status
-update), then a screenshot of the failed push with "error了为什么 push不了", then
-"Key is invalid. You must supply a key in OpenSSH public key format", then
-"检查一下push好了".
-
 - **`git push` over HTTPS failed** ("Password authentication is not supported for Git
   operations"): GitHub no longer accepts account passwords, and the macOS keychain held an
   old one. The agent found an existing SSH key (`~/.ssh/id_ed25519`) that was not
@@ -147,6 +142,15 @@ update), then a screenshot of the failed push with "error了为什么 push不了
   content hash as the local build, so the CI build reproduces the local one.
 
 **Week 1 milestone: complete.**
+
+### Repository renamed
+
+The GitHub repository is renamed from `Boqian_Mao_BIOSTAT615_First_Project` to
+`Boqian_Mao_BIOSTAT615_Final_Project`. Updated to match: the Vite `base` path (the
+site is now served under `/Boqian_Mao_BIOSTAT615_Final_Project/`), the README link,
+SPEC §0 and the `origin` remote. The older URLs above record what was verified before
+the rename. The rename itself has to be done in the GitHub settings, before the next
+push; otherwise the site would be built for a path that does not exist yet.
 
 ### Open items
 
