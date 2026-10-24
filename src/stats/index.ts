@@ -4,6 +4,7 @@
  */
 
 export { pbeta, pbetaBoth } from './beta'
+export { dbinomLog, dhyperLog } from './discrete'
 export { lbeta, lgamma, stirlerr } from './gamma'
 export { pnt } from './noncentralT'
 export { pnorm, pnormBoth, qnorm } from './normal'
