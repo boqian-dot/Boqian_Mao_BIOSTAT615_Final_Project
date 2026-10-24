@@ -6,9 +6,9 @@ final project, Boqian Mao. The full specification is in [SPEC.md](SPEC.md).
 > TrialSizer is a planning aid. It does not replace a statistician, and the final sample
 > size for a real trial should be confirmed with one.
 
-**Status:** week 1 of 7. The project scaffold and the verified numerical core
-(`src/stats/`) are in place; the app itself is a placeholder page. Live site (once
-GitHub Pages is enabled): https://boqian-dot.github.io/Boqian_Mao_BIOSTAT615_First_Project/
+**Status:** week 1 of 7 complete. The project scaffold and the verified numerical core
+(`src/stats/`) are in place; the app itself is a placeholder page.
+Live site: https://boqian-dot.github.io/Boqian_Mao_BIOSTAT615_First_Project/
 
 ## Local development
 

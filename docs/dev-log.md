@@ -123,9 +123,32 @@ the editor; the agent took "the first step" to be the week-1 row of the mileston
 - **Built site:** served with `vite preview`; `index.html`, the JS bundle, the CSS and
   the favicon all load under `/Boqian_Mao_BIOSTAT615_First_Project/`.
 
+### First push to GitHub
+
+Follow-up prompts (verbatim): "给我一点update 现在到哪一步了 还需要干什么" (status
+update), then a screenshot of the failed push with "error了为什么 push不了", then
+"Key is invalid. You must supply a key in OpenSSH public key format", then
+"检查一下push好了".
+
+- **`git push` over HTTPS failed** ("Password authentication is not supported for Git
+  operations"): GitHub no longer accepts account passwords, and the macOS keychain held an
+  old one. The agent found an existing SSH key (`~/.ssh/id_ed25519`) that was not
+  registered with the `boqian-dot` account (`ssh -T git@github.com` was denied), and
+  switched `origin` to the SSH URL. SSH was chosen over a personal access token because a
+  token also needs the `workflow` scope to push files under `.github/workflows/`.
+- **The first attempt to add the key on GitHub failed** ("Key is invalid"): the clipboard
+  did not hold the public key. The agent copied `id_ed25519.pub` to the clipboard as a
+  single line, and the second attempt worked. The author then pushed and set
+  Settings → Pages → Source to "GitHub Actions".
+- **Verified on GitHub:** CI run 40128254293 on `42553f8` succeeded. Both jobs passed
+  (lint, type-check, test and build; then the Pages deployment). The live site
+  https://boqian-dot.github.io/Boqian_Mao_BIOSTAT615_First_Project/ returns 200, and its
+  JS, CSS and favicon all load. The deployed bundle (`index-wKOuHsl7.js`) has the same
+  content hash as the local build, so the CI build reproduces the local one.
+
+**Week 1 milestone: complete.**
+
 ### Open items
 
-- Push to GitHub and set Settings → Pages → Source to "GitHub Actions"; then confirm
-  that CI passes and the placeholder page deploys. **Not verified yet.**
 - Week 2: continuous endpoint (formulas, exact power, integer n search), PRNG and
   variates, the simulation engine in a Web Worker, Layers 2–3 for continuous.
