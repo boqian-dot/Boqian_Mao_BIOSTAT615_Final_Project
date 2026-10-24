@@ -3,4 +3,6 @@
  * Function names follow the R functions each routine is tested against.
  */
 
+export { pbeta, pbetaBoth } from './beta'
+export { lbeta, lgamma, stirlerr } from './gamma'
 export { pnorm, pnormBoth, qnorm } from './normal'
